@@ -3,6 +3,8 @@
 - react에 없는 SSR, SSG, ISR 과 같은 기능들을 제공하는 react를 위한 오픈소스 자바스크립트 웹 프레임워크
 - react는 사용자의 웹 브라우저에서만 실행되기 때문에 SEO(search engine optimization)의 효과를 거의 볼 수 없고, 첫 화면에 웹 애플리케이션을 제대로 표시하기 위해 실행 초기에 성능 부담이 생긴다.
 - 위와 같은 특징들로 인해 만들어진 Server Side Rendering Framwork 이다.
+- React + Express.js + React-Router-Dom + SSR 을 영리하게 합쳐놓은 기술 스택
+  - 위의 기능들을 그대로 가져와 쓴다는 게 아니라 저런 느낌의 라이브러리를 구현해 놓았다는 것이다.
 
 ### | 제공하는 기능
 
@@ -61,4 +63,17 @@
 
 - Nodejs, npm
 
-🟡🔴
+🟡 bash 명령어
+
+```bash
+//개발환경실행
+npm run dev
+
+//배포 파일 생성
+npm run build
+
+//서비스 시작
+npm run start
+```
+
+🔴
