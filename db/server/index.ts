@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 import mongoose from "mongoose";
-import Item, { IItem } from "../models/item";
+import Item from "../models/item";
+import { IItem } from "../models/interface";
 const uri = "mongodb://127.0.0.1:27017/color99b";
 // const dbName = "testdb";
 
@@ -8,6 +9,12 @@ const main = async () => {
   try {
     await mongoose.connect(uri, {});
     console.log("Connected to MongoDB");
+
+    // let testSchema: = mongoose.Schema({
+    //   name: "string",
+    //   address: "string",
+    //   age: "number",
+    // });
 
     const newItem: IItem = new Item({
       name: "Sample Item",
