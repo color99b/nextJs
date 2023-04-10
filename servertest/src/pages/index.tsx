@@ -18,6 +18,11 @@ export default function Home() {
     console.log("오픈");
     console.log(result);
   };
+  const getDB = async () => {
+    const result = await axios.get(`http://localhost:5000/`);
+
+    console.log("result", result);
+  };
   const click = async () => {
     const result = (await axios.post(`http://localhost:5000/api/click`)).data;
     console.log(result);
@@ -26,6 +31,7 @@ export default function Home() {
   useEffect(() => {
     // console.log("오픈2", serverRuntimeConfig.expressServerUrl);
     getData();
+    getDB();
   }, []);
 
   return (

@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  express_server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - MONGODB_URI=mongodb://db:27017/color99b
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  next_server:
+    build: ./servertest
+    ports:
+      - "3000:3000"
+    environment:
+      - EXPRESS_SERVER_URL=http://express_server:3000
