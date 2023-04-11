@@ -8,10 +8,12 @@ services:
     depends_on:
       - db
     environment:
-      - MONGODB_URI=mongodb://db:27017/color99b
+      - MONGODB_URI=mongodb://127.0.0.1:27017/color99b
 
   db:
     image: mongo:latest
+    build: ./db
+
     ports:
       - "27017:27017"
 
@@ -20,4 +22,4 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - EXPRESS_SERVER_URL=http://express_server:3000
+      - EXPRESS_SERVER_URL=http://express_server:5000

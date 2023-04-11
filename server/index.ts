@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 const app = express();
-import { MongoDB } from "../db/index";
+import { MongoDB } from "./db";
 app.use(cors());
 // Define your Express routes, middleware, and other server configurations here
 

@@ -1,16 +1,17 @@
-FROM node:latest
+FROM node:lts
 
-WORKDIR /
+WORKDIR /app
 
-COPY package.json package-lock.json ./ ./
+COPY package*.json ./
 
-COPY / servertest/
+COPY ./ ./
 
 RUN npm ci
 
-COPY src/pages/index.tsx tsconfig.json ./
+RUN npm run build
 
 
-ENTRYPOINT [ "npm", "run dev" ]
+
+ENTRYPOINT [ "npm", "run", "start" ]
    
 

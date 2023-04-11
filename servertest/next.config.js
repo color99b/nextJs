@@ -9,5 +9,4 @@ const nextConfig = {
     // Specify your public configurations here
   },
 };
-
 module.exports = nextConfig;

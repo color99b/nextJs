@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "preserveValueImports": false,
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "es6",
+    "strict": true,
+    "outDir": "dist"
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

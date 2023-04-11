@@ -1,16 +1,17 @@
-FROM node:latest
+FROM node:18.14.2
 
-WORKDIR /
+WORKDIR /app
 
-COPY package.json package-lock.json ./ ./
+COPY package*.json ./
 
-COPY / server/
+COPY ./ ./
 
 RUN npm ci
 
-COPY index.ts tsconfig.json ./
+RUN npm run build
 
 
-ENTRYPOINT [ "node", "index.ts" ]
+
+ENTRYPOINT [ "npm", "start" ]
    
 
